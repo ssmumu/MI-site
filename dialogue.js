@@ -1,6 +1,6 @@
 
 init_timer = 100 
-increment_timer = 1500	//400
+increment_timer = 400	//1500
 user_response = 0
 user_options = ['shown_dialogue_option']
 user_chosen_options = []
@@ -9,8 +9,9 @@ how_many_agent_dialogue = 0
 feature = ""
 summary_tips = []
 
-new_dialogue("agent",			"Hi, I'm Mia. Welcome to the motivational interview session!")
-new_dialogue("user_option",		"Hello!")
+new_dialogue("agent",			"Hi " + person_name + ", I'm Mia!")
+new_dialogue("agent",			"Welcome to the motivational interview session.")
+new_dialogue("user_option",		"Hello, Mia!")
 
 function node1(){
 	console.log('node1');
@@ -20,7 +21,7 @@ function node1(){
 }
 
 
-function node2(){
+function node2(){	
 	console.log('node2');
 	new_dialogue("agent",			"Learning to be better at team discussion needs effort.")
 	new_dialogue("agent",			"You've already taken the first step by being in this session.")
@@ -96,6 +97,7 @@ function node8(){
 }
 
 function node9(){
+	save_userinfo("_mi_intro.txt", user_chosen_options);
 	console.log('node9');
 	user_options = ['0','1', '2', '3', '4', '5','6','7','8','9']
 	new_dialogue("agent",			"In that case, how much does it worry or concern you?")
@@ -116,6 +118,7 @@ function node10(){
 	console.log('node10');
 	user_options = ['shown_dialogue_option'];
 	value = Number(user_chosen_options[user_chosen_options.length - 1]);
+	console.log(user_chosen_options);
 	if( value < 5 )
 		new_dialogue("agent",			"You selected " + value.toString()+". Great confidence! Knowing the strengths is important.")
 	if( value > 4 ){
