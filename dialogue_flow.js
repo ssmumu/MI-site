@@ -39,6 +39,7 @@ function textinput_to_dialogue(e) {
 	user_text_input = user_text_input + String.fromCharCode(e.keyCode);
 	if (e.keyCode == 13) { 
 		add_dialogue("button", "class=button button_userDialogue", user_text_input)
+		user_chosen_options.push([user_text_input]);
 		remove_optionDialogue("input_textbox");
 		new_dialogueNode_flow();
 		user_text_input ="";
@@ -86,7 +87,7 @@ document.addEventListener('click',function(e){
     // if(e.target && e.target.id== 'shown_dialogue_option'){
     if(e.target && e.target.type == "submit"){
     	  var txt = document.getElementById(e.target.id).innerHTML;
-    	  user_chosen_options.push(txt);
+    	  user_chosen_options.push([txt]);
     	  for (i = 0; i < user_options.length; i++)
           		remove_optionDialogue(user_options[i]);
           add_dialogue("button", "class=button button_userDialogue", txt);
