@@ -5,7 +5,7 @@
 var person_name = prompt("Hello! Please enter your name", "");
 
 if (person_name.replace(/\s/g, "") != "") {	/* checks if whitespace included as name input, if not then ok. else reload page*/
-  console.log("Hello " + person_name + "! How are you today?")
+  console.log("Hello " + person_name)
 }
 else {
 	location.reload()

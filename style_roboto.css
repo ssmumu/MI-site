@@ -1,0 +1,121 @@
+
+.center-div{
+  /*text-align: center;*/
+  font-family: Tahoma;
+/*  margin-top: 25%;*/
+	height: 530px;
+	/*border-style: solid;
+  	border-color: coral;*/
+  	/*border-bottom: 1px solid #f1f1f1;*/
+/*  	overflow:scroll;*/
+/*    overflow-y:auto;*/
+/*    overflow-x:auto;*/
+	overflow: auto;
+}
+
+.reply-div{
+    font-family: Tahoma;
+    text-align: center;
+  	/*border-style: solid;
+  	border-color: coral;*/
+  	border-top: 1px solid #ededed;
+  	margin-top: 1%;
+}
+
+.button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  height: 9%; 
+  padding: 25px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15pt;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family: Tahoma; 
+  border-radius: 15px;
+  width: fit-content;
+}
+
+.button_agentDialogue {
+  pointer-events: none;
+  position:relative;
+  background-color: #8E388E; 
+  color: white; 
+  /*width: 30%; */
+  margin: 4px 35% 0px 20%;
+  padding: 0px 30px 1px 15px;
+  text-align: left;
+  font-size: 15px; 
+}
+
+.button_agentDialogue:after {
+   position:absolute;
+   content: ""; 
+   top:15px;left:-10px;
+   border-width: 10px 15px 10px 0px;
+   border-color: transparent  #8E388E;
+   border-style: solid;
+}
+
+.button_userDialogue {
+  pointer-events: none;
+  position:relative;
+  background-color: #b8b9ba; 
+  color: white; 
+  /*height: 8%; */
+  /*width: 30%; */
+  margin: 4px 10% 0px 70%;
+  padding: 0px 30px 1px 15px;
+  text-align: left;
+  font-size: 15px; 
+}
+
+.button_userDialogue:after {
+   position:absolute;
+   content: ""; 
+   top:15px;right:-10px;
+   border-width: 10px 0px 10px 15px;
+   border-color: transparent  #b8b9ba;
+   border-style: solid;
+
+}
+
+
+.button_userDialogue_option {
+  position:relative;
+/*  background-color: #4CAF50; */
+  color: white; 
+  margin-top: 1%;
+  margin-bottom: 15%;
+  margin-right: 1%;
+  /*margin-left: 70%;*/
+  padding: 0px 20px 1px 15px;
+  text-align: left;
+  font-size: 15px; 
+}
+
+.red {
+  color: red;
+}
+
+.button_blankDialogue {
+  pointer-events: none;
+  position:relative;
+  background-color: white; 
+  color: white; 
+  /*width: 30%; */
+  margin: 500px 35% 0px 20%;
+  padding: 0px 30px 1px 15px;
+  text-align: left;
+  font-size: 15px; 
+}
+
+
+
+
+
+

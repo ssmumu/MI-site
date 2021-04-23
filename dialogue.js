@@ -1,6 +1,6 @@
 
 init_timer = 100	//100
-increment_timer = 1500	//400, 100
+increment_timer = 100	//400, 100
 user_response = 0
 user_options = ['shown_dialogue_option']
 user_chosen_options = []
@@ -77,7 +77,7 @@ function node3(){
 function node4(){	//
 	console.log('node4');
 	user_options = ['0','1', '2']
-	new_dialogue("agent",			"Seems like things can be improved. Have you ever noticed other attendees suffer too?");
+	new_dialogue("agent",			"Seems like things can be improved. Have you ever noticed other attendees being dissatisfied too?");
 	new_dialogue("user_option",		"Yes", user_options[0])
 	new_dialogue("user_option",		"No", user_options[1])
 	new_dialogue("user_option",		"I didn't notice", user_options[2])
@@ -86,7 +86,7 @@ function node4(){	//
 function node5(){
 	console.log('node5');
 	user_options = ['1', '2', '3', '4', '5','6','7','8','9','10'];
-	new_dialogue("agent",			"On a scale of 1 (low) to 9 (high), to you how important is to improve conversational skills in order to help yourself or others in a discussion?");
+	new_dialogue("agent",			"On a scale of 1 (low) to 10 (high), how important is it to you to improve conversational skills in order to help yourself or others in a discussion?");
 	new_dialogue("user_option",		"1", user_options[0])
 	new_dialogue("user_option",		"2", user_options[1])
 	new_dialogue("user_option",		"3", user_options[2])
@@ -373,7 +373,7 @@ function node10(){
 		summary_tips.push("Release speaker's floor -> 'What do you all think about this?'")
 	}
 	else if(feature === "Handling Disagreement"){
-		new_dialogue("agent",			"1. Respectful disagreement is possible through active listening. Summarize other's point, find a common ground, and then add your perspective.")
+		new_dialogue("agent",			"1. Respectful disagreement is possible through active listening. Summarize others' points, find a common ground, and then add your perspective.")
 		new_dialogue("agent",			"For example, 'I agree with your point about ___ , I would also like to point out that ___'", 'shown_dialogue_option', 1)
 		new_dialogue("agent",			"2. Upon being interrupted, acknowledge and address ('If I can quickly finish up my thoughts, ___').", 'shown_dialogue_option', 1)
 		new_dialogue("agent",			"Are these suggestions helpful?")
@@ -385,7 +385,7 @@ function node10(){
 	}
 
 	else if(feature === "Being Collaborative"){
-		new_dialogue("agent",			"1. Study shows that collaborative pronouns ('We' instead of 'I') bring a sense of togetherness.", 'shown_dialogue_option', 1)
+		new_dialogue("agent",			"1. Studies sho that collaborative pronouns ('We' instead of 'I') bring a sense of togetherness.", 'shown_dialogue_option', 1)
 		//new_dialogue("agent",			"Add to it, avoiding negative adjectives ('Can be better' instead of 'Bad') keeps up a positive vibe.", 'shown_dialogue_option', 1)
 		new_dialogue("agent",			"2. Keeping an eye on whether others are able to express their opinions or not establishes a safe space.", 'shown_dialogue_option', 1)
 		new_dialogue("agent",			"(For example, 'Samantha got interrupted before, let's hear her ideas on this.)")
@@ -393,7 +393,7 @@ function node10(){
 		new_dialogue("user_option",		"Useful tips!", user_options[0])
 		new_dialogue("user_option",		"I don't quite see the usefulness, but thanks!", user_options[1])
 
-		summary_tips.push("Pronous -> More 'We' instead of 'I'.")
+		summary_tips.push("Pronouns -> More 'We' instead of 'I'.")
 		summary_tips.push("Offer help -> 'Let attendee-A finish up the thought.'")
 	}
 
@@ -455,7 +455,7 @@ function node12(){
 		summary_tips.push("Release speaker's floor -> 'What do you all think about this?'")
 	}
 	else if(feature === "Handling Disagreement"){
-		new_dialogue("agent",			"1. Respectful disagreement is possible through active listening. Try to summarize other's point of view, find a common ground, and then add your perspective.")
+		new_dialogue("agent",			"1. Respectful disagreement is possible through active listening. Summarize others' points, find a common ground, and then add your perspective.")
 		new_dialogue("agent",			"For example, 'I agree with your point about ___ , I would also like to point out that ___'", 'shown_dialogue_option', 1)
 		new_dialogue("agent",			"2. Upon being interrupted, acknowledge and address ('If I can quickly finish up my thoughts, ___').", 'shown_dialogue_option', 1)
 		new_dialogue("agent",			"Are these suggestions helpful?")
@@ -475,7 +475,7 @@ function node12(){
 		new_dialogue("user_option",		"Useful tips!", user_options[0])
 		new_dialogue("user_option",		"I don't quite see the usefulness, but thanks!", user_options[1])
 
-		summary_tips.push("Pronous -> More 'We' instead of 'I'.")
+		summary_tips.push("Pronouns -> More 'We' instead of 'I'.")
 		summary_tips.push("Offer help -> 'Let attendee-A finish up the thought.'")
 	}
 }
@@ -538,7 +538,7 @@ function node14(){
 		summary_tips.push("Release speaker's floor -> 'What do you all think about this?'")
 	}
 	else if(feature === "Handling Disagreement"){
-		new_dialogue("agent",			"1. Respectful disagreement is possible through active listening. Try to summarize other's point of view, find a common ground, and then add your perspective.")
+		new_dialogue("agent",			"1. Respectful disagreement is possible through active listening. Summarize others' points, find a common ground, and then add your perspective.")
 		new_dialogue("agent",			"For example, 'I agree with your point about ___ , I would also like to point out that ___'", 'shown_dialogue_option', 1)
 		new_dialogue("agent",			"2. Upon being interrupted, acknowledge and address ('If I can quickly finish up my thoughts, ___').", 'shown_dialogue_option', 1)
 		new_dialogue("agent",			"Are these suggestions helpful?")
@@ -558,7 +558,7 @@ function node14(){
 		new_dialogue("user_option",		"Useful tips!", user_options[0])
 		new_dialogue("user_option",		"I don't quite see the usefulness, but thanks!", user_options[1])
 
-		summary_tips.push("Pronous -> More 'We' instead of 'I'.")
+		summary_tips.push("Pronouns -> More 'We' instead of 'I'.")
 		summary_tips.push("Offer help -> 'Let attendee-A finish up the thought.'")
 	}
 }
