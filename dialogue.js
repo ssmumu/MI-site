@@ -375,7 +375,7 @@ function node10(){
 		summary_tips.push("Release speaker's floor -> 'What do you all think about this?'")
 	}
 	else if(feature === "Handling Disagreement"){
-		new_dialogue("agent",			"1. Respectful disagreement is possible through active listening. Summarize others' points, find a common ground, and then add your perspective.")
+		new_dialogue("agent",			"1. Respectful disagreement is possible through active listening. Summarize others' points, find common ground, then add your perspective.")
 		new_dialogue("agent",			"For example, 'I agree with your point about ___ , I would also like to point out that ___'", 'shown_dialogue_option', 1)
 		new_dialogue("agent",			"2. Upon being interrupted, acknowledge and address ('If I can quickly finish up my thoughts, ___').", 'shown_dialogue_option', 1)
 		new_dialogue("agent",			"Are these suggestions helpful?")
@@ -387,7 +387,7 @@ function node10(){
 	}
 
 	else if(feature === "Being Collaborative"){
-		new_dialogue("agent",			"1. Studies sho that collaborative pronouns ('We' instead of 'I') bring a sense of togetherness.", 'shown_dialogue_option', 1)
+		new_dialogue("agent",			"1. Studies show that collaborative pronouns ('We' instead of 'I') bring a sense of togetherness.", 'shown_dialogue_option', 1)
 		//new_dialogue("agent",			"Add to it, avoiding negative adjectives ('Can be better' instead of 'Bad') keeps up a positive vibe.", 'shown_dialogue_option', 1)
 		new_dialogue("agent",			"2. Keeping an eye on whether others are able to express their opinions or not establishes a safe space.", 'shown_dialogue_option', 1)
 		new_dialogue("agent",			"(For example, 'Samantha got interrupted before, let's hear her ideas on this.)")

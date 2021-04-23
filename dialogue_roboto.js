@@ -178,7 +178,7 @@ function node12(){	//9
 	console.log('node12');
 	//new_topic_flow();
 	user_options = ['1', '2']
-	new_dialogue("agent",			"Nice! A quick pointer on collaborative pronoun usage - try using more 'We' instead of 'I'.", 'shown_dialogue_option', 1)
+	new_dialogue("agent",			"Nice! A small but efficient suggestion is to try using more 'We' instead of 'I'.", 'shown_dialogue_option', 1)
 		
 	new_dialogue("user_option",		"I will definitely give it a try!", user_options[0])
 	new_dialogue("user_option",		"Not sure if I will use it", user_options[1])
