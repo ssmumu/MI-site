@@ -29,20 +29,20 @@ function parse_userinput_summary(input_text_by_user){
 
 	if ((input_text_by_user.toLowerCase().includes(","))){
 
-		find_and = input_text_by_user.split(',')[0];
+		find_and = input_text_by_user.split(",", 1);
 		
 	}
 	else if ((input_text_by_user.toLowerCase().includes(" and"))){
-		find_and = input_text_by_user.split(' and')[0];
+		find_and = input_text_by_user.split(" and", 1);
 		
 	}
 	else if((input_text_by_user.toLowerCase().includes(" because"))){
-		find_and = input_text_by_user.split(' because')[0];
+		find_and = input_text_by_user.split(' because', 1);
 		
 	}
 	else if ((input_text_by_user.toLowerCase().includes(" so ")))
 	{
-		find_and = input_text_by_user.split(' so ')[0];
+		find_and = input_text_by_user.split(' so ', 1);
 	}
 
 	if (find_and.includes(' i ')){
