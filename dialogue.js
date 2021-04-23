@@ -138,7 +138,9 @@ function node8(){
 	user_options = ['shown_dialogue_option'];
 	value = (user_chosen_options[user_chosen_options.length - 1])[0];
 
-	new_dialogue("agent",			"So you would try to " + value.split("I can ")[1].split("\r")[0] + " to make progress." )
+	//new_dialogue("agent",			"So you would try to " + value.split("I can ")[1].split("\r")[0] + " to make progress." )
+	new_dialogue("agent",			"So you would try to " + parse_userinput_summary(value.split("I can ")[1].split("\r")[0]) + " to make progress." )
+	
 	new_dialogue("agent",			"I can help with finding tips and tricks to improve conversational skills. Let's dive deeper, shall we?")
 
 	new_dialogue("user_option",		"I'm ready")
@@ -357,9 +359,9 @@ function node10(){
 	value = (user_chosen_options[user_chosen_options.length - 1])[0];
 	feature = value;
 	feature_seen.push(value);
-	console.log(feature_seen);
+//	console.log(feature_seen);
 
-	console.log(value);
+//	console.log(value);
 
 	if(feature === "Balanced Speaking"){
 		new_dialogue("agent",			"Both speaking and listening are important for a productive discussion. Be mindful of your speaking duration.")
@@ -401,7 +403,7 @@ function node10(){
 }
 
 function node11(){
-	console.log('node200', feature_seen);
+	console.log('node11');
 	//new_topic_flow();
 	user_options = ['1', '2', '3'];
 	//value = (user_chosen_options[user_chosen_options.length - 1])[0];
@@ -494,7 +496,7 @@ function node13(){
 
 
 	new_dialogue("agent",			"Almost there! Let's review the final one.")
-	console.log('check features seen ', feature_seen)
+	//console.log('check features seen ', feature_seen)
 
 	if (feature_seen.includes("Balanced Speaking")){
 		console.log('seen');

@@ -7,6 +7,24 @@ function add_dialogue(el, cl, txt, highlight=0, box='chatbox', iid='id=dummy', b
 	   elem.setAttribute(keyvalue[0], keyvalue[1]); 
 	   var keyvalue2 = iid.split('='); 
 	   elem.setAttribute(keyvalue2[0], keyvalue2[1]); 
+	   
+
+	   if(keyvalue[1].includes("button_userDialogue")){
+	   	console.log("found user button", txt, txt.length);
+	   	if(txt.length > 60){
+	   		console.log('more than 60');
+	   		elem.style.height = "auto";
+
+	   	}
+	   }
+
+
+
+	   // height_value_now =  elem.style.height;
+	   // if height_value_now < 
+	   
+
+
 	   if(highlight == 1){
 		//	elem.style.backgroundColor = "#32bfbd";
 		//	elem.style.after.borderColor = "transparent  #32bfbd";
@@ -99,8 +117,11 @@ function add_textbox(start_string) {
 }
 
 function textinput_to_dialogue(e) { 
-	user_text_input = user_text_input + String.fromCharCode(e.keyCode);
+	//user_text_input = user_text_input + String.fromCharCode(e.keyCode);
+	user_text_input = e.target.value;
+
 	if (e.keyCode == 13) { 
+		console.log(user_text_input);
 		add_dialogue("button", "class=button button_userDialogue", user_text_input)
 		user_chosen_options.push([user_text_input]);
 		remove_optionDialogue("input_textbox");
