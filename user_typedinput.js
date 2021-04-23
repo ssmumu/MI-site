@@ -27,7 +27,12 @@ function parse_userinput_summary(input_text_by_user){
 
 	var find_and = input_text_by_user.toLowerCase();
 
-	if ((input_text_by_user.toLowerCase().includes(" and"))){
+	if ((input_text_by_user.toLowerCase().includes(","))){
+
+		find_and = input_text_by_user.split(',')[0];
+		
+	}
+	else if ((input_text_by_user.toLowerCase().includes(" and"))){
 		find_and = input_text_by_user.split(' and')[0];
 		
 	}
@@ -50,6 +55,7 @@ function parse_userinput_summary(input_text_by_user){
 	if (find_and.includes(' me ')){
 		find_and = find_and.replace(' me ', ' you ');
 	}
+
 
 	return find_and;
 
