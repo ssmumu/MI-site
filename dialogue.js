@@ -1,6 +1,6 @@
 
 init_timer = 100	//100
-increment_timer = 100	//400, 100
+increment_timer = 1500	//400, 100
 user_response = 0
 user_options = ['shown_dialogue_option']
 user_chosen_options = []
