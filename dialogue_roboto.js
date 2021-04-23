@@ -166,8 +166,8 @@ function node11(){	//9
 	console.log('node11');
 	//new_topic_flow();
 	user_options = ['1', '2']
-	new_dialogue("agent",			"I hear you. The final suggestion is on being more collaborative.", 'shown_dialogue_option', 1)
-	new_dialogue("agent",			"Through out word usage and sentence structure, we can work as a teamplayer.", 'shown_dialogue_option', 1)
+	new_dialogue("agent",			"I hear you. I have some suggestions on being more collaborative.", 'shown_dialogue_option', 1)
+	new_dialogue("agent",			"Through our word usage and sentence structure, we can work as a teamplayer.", 'shown_dialogue_option', 1)
 		
 	new_dialogue("user_option",		"Show some examples", user_options[0])
 	new_dialogue("user_option",		"I already know", user_options[1])
@@ -190,8 +190,8 @@ function node13(){	//9
 	//new_topic_flow();
 	user_options = ['1', '2']
 	new_dialogue("agent",			"Another way to be collaborative is to notice if any other teammate is having trouble conveing their opinions.", 'shown_dialogue_option', 1)
-	new_dialogue("agent",			"You may notice such a thing, for example someone getting interrupted a lot. you can say - 'John got interrupted before, let's hear his ideas on this.")
-	new_dialogue("agent",			"In such a case, you can say things like - 'John got interrupted before, let's hear his ideas on this.")
+	new_dialogue("agent",			"You may notice such a thing, for example someone getting interrupted a lot.")
+	new_dialogue("agent",			"In such a case, you can say things like - 'John got interrupted before, let's hear his ideas on this.'")
 		
 
 	new_dialogue("user_option",		"Okay got this too", user_options[0])
